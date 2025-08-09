@@ -32,6 +32,7 @@ import {
 } from "@/components/ui/command";
 import { Button } from "@/components/ui/button";
 
+// Statistik kartalar
 const stats = [
   {
     label: "Foydalanuvchilar",
@@ -59,10 +60,12 @@ const stats = [
   },
 ];
 
+// Teg variantlari
 const labels = ["Frontend", "Backend", "AI", "Mobile", "Beginner", "Advanced"];
 
 export default function AdminPage() {
-  const [courseTags, setCourseTags] = useState({
+  // ✅ Tip berildi — endi TS xato qilmaydi
+  const [courseTags, setCourseTags] = useState<Record<string, string>>({
     react: "Beginner",
     node: "Backend",
     ai: "AI",
